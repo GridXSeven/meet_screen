@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 void main() {
   runApp(MyApp());
@@ -340,10 +341,10 @@ class MeetBottomButtonBar extends StatelessWidget {
                 child: Center(
                     child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(
+                  child: AutoSizeText(
                     "ANOTHER ONE",
                     style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 16,
                     ),
                   ),
                 )),
@@ -354,10 +355,10 @@ class MeetBottomButtonBar extends StatelessWidget {
                   child: Center(
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),
-                      child: Text(
+                      child: AutoSizeText(
                         "INTERESTED!",
                         style: TextStyle(
-                          fontSize: 24,
+                          fontSize: 16,
                           color: Color(0xff9C27B0),
                         ),
                       ),
