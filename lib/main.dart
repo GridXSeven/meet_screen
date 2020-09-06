@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'package:auto_size_text/auto_size_text.dart';
+import 'create_meet.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,14 +11,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        builder: (context, child) {
-          return ScrollConfiguration(
-            behavior: MyBehavior(),
-            child: child,
-          );
-        },
-        debugShowCheckedModeBanner: false,
-        home: MeetScreen());
+      builder: (context, child) {
+        return ScrollConfiguration(
+          behavior: MyBehavior(),
+          child: child,
+        );
+      },
+      debugShowCheckedModeBanner: false,
+      home: CreateMeet(),
+    );
   }
 }
 
@@ -183,7 +185,7 @@ class CreateButton extends StatelessWidget {
 class MeetPurpose extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CardBlock(
+    return VerticalCardBlock(
       text: Text(
         "Meet purpose",
         style: TextStyle(fontSize: 20, fontWeight: titelWeight),
@@ -197,7 +199,7 @@ class MeetPurpose extends StatelessWidget {
 class AboutMe extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CardBlock(
+    return VerticalCardBlock(
       text: Text(
         "About me",
         style: TextStyle(fontSize: 20, fontWeight: titelWeight),
@@ -242,7 +244,7 @@ class MyCustomChip extends StatelessWidget {
 class AboutYou extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CardBlock(
+    return VerticalCardBlock(
       text: Row(
         children: [
           Text(
@@ -280,7 +282,7 @@ class AboutYou extends StatelessWidget {
 class MeetLocation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return CardBlock(
+    return VerticalCardBlock(
       text: Text(
         "Location",
         style: TextStyle(fontSize: 20, fontWeight: titelWeight),
@@ -374,8 +376,8 @@ class MeetBottomButtonBar extends StatelessWidget {
   }
 }
 
-class CardBlock extends StatelessWidget {
-  CardBlock({
+class VerticalCardBlock extends StatelessWidget {
+  VerticalCardBlock({
     @required this.text,
     @required this.child,
   });
